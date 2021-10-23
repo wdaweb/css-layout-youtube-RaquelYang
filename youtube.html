@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <title>Youtube</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      font-family: '微軟正黑體';
+      text-decoration: none;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    body {
+      position: relative;
+    }
+
+    .mainnavbar {
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      z-index: 2;
+      background: rgb(244, 244, 244);
+
+    }
+
+    .mainnavbar .fistnavbar li {
+      margin-left: .7rem;
+      display: inline-block;
+      padding: .5rem;
+    }
+
+    ul.fistnavbar li:nth-child(1),
+    ul.fistnavbar li:nth-child(2) {
+      float: left;
+      line-height: 2rem;
+    }
+
+    ul.fistnavbar li:nth-child(n+5) {
+      float: right;
+      line-height: 2rem;
+    }
+
+    .sidebar {
+      position: fixed;
+      height: 100vh;
+      width: 15%;
+      left: 0;
+      z-index: 2;
+      /* background: burlywood; */
+      display: block;
+      overflow-y: auto;
+      margin-top: 3rem;
+      background: rgb(244, 244, 244);
+
+    }
+
+    .sidebar ul li {
+      display: block;
+      padding: 1rem;
+      /* background: #aaa; */
+    }
+
+    .sidebar ul li:hover {
+      background: #ddd;
+    }
+
+    .sidebar ul li:nth-child(5n+2) {
+      content: "";
+      width: 90%;
+      /* display: block; */
+      /* padding-bottom: 5px; */
+      border-bottom: 1px solid #ccc;
+    }
+
+    ul .logo a {
+      /* background: lightcoral; */
+      display: inline-block;
+      margin: 0rem;
+    }
+
+    .logo a i {
+      font-size: 1.3rem;
+    }
+
+    .main {
+      height: 100vh;
+      width: 85%;
+      position: absolute;
+      right: 0;
+      margin-top: 3rem;
+    }
+
+    .navbar {
+      background-color: rgb(244, 244, 244);
+      width: 85%;
+      position: fixed;
+      right: 0;
+      z-index: 2;
+
+    }
+
+    a {
+      color: #222;
+    }
+
+    .navbar ul {
+      text-align: center;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      padding: 0.5rem;
+
+    }
+
+    li input {
+      width: 25rem;
+      height: 2rem;
+      float: left;
+      padding: .3rem;
+      border: 1px solid #aaa;
+      border-right: 0px;
+
+    }
+
+    li button {
+      width: 3rem;
+      height: 2rem;
+      color: #777;
+      border: 1px solid #888;
+
+    }
+
+
+
+    /* second navbar */
+    .secondbar {
+      border-top: 1px solid #999;
+
+    }
+
+    .secondbar li a {
+      display: inline-block;
+      width: 5rem;
+      padding: .4rem;
+      border-radius: 1.5rem;
+      background: #ddd;
+      color: #222;
+      border: 1px solid #aaa;
+      transition: .15s;
+
+    }
+
+    .secondbar li a:hover {
+      background: black;
+      color: white;
+    }
+
+
+    .login a {
+      border: 1px solid rgb(47, 98, 101);
+      padding: .3rem;
+      color: rgb(47, 98, 101);
+    }
+
+    .login a i {
+      padding-right: .5rem;
+    }
+
+    .banner {
+      margin-top: 3rem;
+    }
+
+    .banner img {
+      width: 100%;
+      overflow: hidden;
+      background-size: cover;
+      background: no-repeat center/center;
+      
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    .col {
+      width: 30%;
+      padding: .3rem;
+      margin: .3rem;
+      display: inline-block;
+    }
+
+    .text {
+      position: relative;
+    }
+
+    .text::after {
+      content: '3:05';
+      position: absolute;
+      background: black;
+      color: white;
+      right: 1rem;
+      top: -2.5rem
+    }
+
+    .col .top {
+      width: 100%;
+    }
+
+    .firstbar .img {
+      float: left;
+      height: 80px;
+      padding: .3rem;
+      
+    }
+
+    .firstbar img {
+      width: 30px;
+      border-radius: 50%;
+    }
+
+    .text .title {
+      font-size: .9rem;
+    }
+
+    .subtitle p {
+      font-size: .8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mainnavbar">
+    <ul class="fistnavbar">
+      <li><a href="#"><i class="fas fa-bars"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube">Youtube</i></a></li>
+      <li>
+        <form action="#" name="search">
+          <input type="text" placeholder="搜尋">
+          <button><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="#"><i class="fas fa-microphone"></i></a></li>
+      <li class="login"><a href="#"><i class="far fa-user-circle"></i>登入</a></li>
+      <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
+      <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+    </ul>
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#"><i class="fas fa-search">
+            &nbsp;&nbsp;首頁 </i></a></li>
+      <li><a href="#"><i class="far fa-compass">
+            &nbsp;&nbsp;探索 </i></a></li>
+      <li><a href="#"><i class="fas fa-video">
+            &nbsp;&nbsp;訂閱內容 </i></a></li>
+      <li><a href="#"><i class="fas fa-book">
+            &nbsp;&nbsp;媒體庫 </i></a></li>
+      <li><a href="#"><i class="fas fa-retweet">
+            &nbsp;&nbsp;觀看紀錄 </i></a></li>
+      <li><a href="#"><i class="far fa-clock">
+            &nbsp;&nbsp;稍後觀看 </i></a></li>
+      <li><a href="#"><i class="fas fa-thumbs-up">
+            &nbsp;&nbsp;喜歡的影片 </i></a></li>
+      <li><a href="#"><i class="fas fa-search">
+            &nbsp;&nbsp;首頁 </i></a></li>
+      <li><a href="#"><i class="far fa-compass">
+            &nbsp;&nbsp;探索 </i></a></li>
+      <li><a href="#"><i class="fas fa-video">
+            &nbsp;&nbsp;訂閱內容 </i></a></li>
+      <li><a href="#"><i class="fas fa-book">
+            &nbsp;&nbsp;媒體庫 </i></a></li>
+      <li><a href="#"><i class="fas fa-retweet">
+            &nbsp;&nbsp;觀看紀錄 </i></a></li>
+      <li><a href="#"><i class="far fa-clock">
+            &nbsp;&nbsp;稍後觀看 </i></a></li>
+      <li><a href="#"><i class="fas fa-thumbs-up">
+            &nbsp;&nbsp;喜歡的影片 </i></a></li>
+      <li><a href="#"><i class="fas fa-search">
+            &nbsp;&nbsp;首頁 </i></a></li>
+      <li><a href="#"><i class="far fa-compass">
+            &nbsp;&nbsp;探索 </i></a></li>
+      <li><a href="#"><i class="fas fa-video">
+            &nbsp;&nbsp;訂閱內容 </i></a></li>
+      <li><a href="#"><i class="fas fa-book">
+            &nbsp;&nbsp;媒體庫 </i></a></li>
+      <li><a href="#"><i class="fas fa-retweet">
+            &nbsp;&nbsp;觀看紀錄 </i></a></li>
+      <li><a href="#"><i class="far fa-clock">
+            &nbsp;&nbsp;稍後觀看 </i></a></li>
+      <li><a href="#"><i class="fas fa-thumbs-up">
+            &nbsp;&nbsp;喜歡的影片 </i></a></li>
+      <li><a href="#"><i class="fas fa-search">
+            &nbsp;&nbsp;首頁 </i></a></li>
+      <li><a href="#"><i class="far fa-compass">
+            &nbsp;&nbsp;探索 </i></a></li>
+      <li><a href="#"><i class="fas fa-video">
+            &nbsp;&nbsp;訂閱內容 </i></a></li>
+      <li><a href="#"><i class="fas fa-book">
+            &nbsp;&nbsp;媒體庫 </i></a></li>
+      <li><a href="#"><i class="fas fa-retweet">
+            &nbsp;&nbsp;觀看紀錄 </i></a></li>
+      <li><a href="#"><i class="far fa-clock">
+            &nbsp;&nbsp;稍後觀看 </i></a></li>
+      <li><a href="#"><i class="fas fa-thumbs-up">
+            &nbsp;&nbsp;喜歡的影片 </i></a></li>
+
+    </ul>
+  </div>
+  <!-- 第二個navbar -->
+  <div class="main">
+    <div class="navbar">
+      <ul class="secondbar">
+        <li><a href="#">全部</a></li>
+        <li><a href="#">音樂</a></li>
+        <li><a href="#">直撥中</a></li>
+        <li><a href="#">寵物</a></li>
+        <li><a href="#">最新上傳</a></li>
+
+      </ul>
+    </div>
+    <!-- 廣告 -->
+    <div class="banner">
+      <img src="https://picsum.photos/1200/300/?random=1" alt="advertise">
+    </div>
+    <!-- 下面頁面 -->
+    
+    <div class="container">
+      <div class="col">
+        <a href="#"><img
+            src="https://picsum.photos/300/160/?random=1"
+            class="top"></a>
+        <div class="bottom">
+          <div class="firstbar">
+            <div class="img">
+              <a href="#"><img src="https://picsum.photos/40/40/?random=12"></a>
+            </div>
+            <div class="text">
+              <h3 class="title"><a href=""> 居酒屋風雞翅&蒟蒻甜辛煮/Ama kara Chicken Wings |MASAの料理ABC</a></h3>
+            </div>
+          </div>
+          <div class="subtitle">
+            <p>MASAの料理ABC</p>
+            <p>觀看次數：442次・兩年前</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col">
+        <a href="#"><img src="https://picsum.photos/300/160/?random=1" class="top"></a>
+        <div class="bottom">
+          <div class="firstbar">
+            <div class="img">
+              <a href="#"><img src="https://picsum.photos/40/40/?random=12"></a>
+            </div>
+            <div class="text">
+              <h3 class="title"><a href=""> 居酒屋風雞翅&蒟蒻甜辛煮/Ama kara Chicken Wings |MASAの料理ABC</a></h3>
+            </div>
+          </div>
+          <div class="subtitle">
+            <p>MASAの料理ABC</p>
+            <p>觀看次數：442次・兩年前</p>
+          </div>
+      
+        </div>
+      </div>
+      <div class="col">
+        <a href="#"><img src="https://picsum.photos/300/160/?random=1" class="top"></a>
+        <div class="bottom">
+          <div class="firstbar">
+            <div class="img">
+              <a href="#"><img src="https://picsum.photos/40/40/?random=12"></a>
+            </div>
+            <div class="text">
+              <h3 class="title"><a href=""> 居酒屋風雞翅&蒟蒻甜辛煮/Ama kara Chicken Wings |MASAの料理ABC</a></h3>
+            </div>
+          </div>
+          <div class="subtitle">
+            <p>MASAの料理ABC</p>
+            <p>觀看次數：442次・兩年前</p>
+          </div>
+      
+        </div>
+      </div>
+      <div class="col">
+        <a href="#"><img src="https://picsum.photos/300/160/?random=1" class="top"></a>
+        <div class="bottom">
+          <div class="firstbar">
+            <div class="img">
+              <a href="#"><img src="https://picsum.photos/40/40/?random=12"></a>
+            </div>
+            <div class="text">
+              <h3 class="title"><a href=""> 居酒屋風雞翅&蒟蒻甜辛煮/Ama kara Chicken Wings |MASAの料理ABC</a></h3>
+            </div>
+          </div>
+          <div class="subtitle">
+            <p>MASAの料理ABC</p>
+            <p>觀看次數：442次・兩年前</p>
+          </div>
+      
+        </div>
+      </div>
+      <div class="col">
+        <a href="#"><img src="https://picsum.photos/300/160/?random=1" class="top"></a>
+        <div class="bottom">
+          <div class="firstbar">
+            <div class="img">
+              <a href="#"><img src="https://picsum.photos/40/40/?random=12"></a>
+            </div>
+            <div class="text">
+              <h3 class="title"><a href=""> 居酒屋風雞翅&蒟蒻甜辛煮/Ama kara Chicken Wings |MASAの料理ABC</a></h3>
+            </div>
+          </div>
+          <div class="subtitle">
+            <p>MASAの料理ABC</p>
+            <p>觀看次數：442次・兩年前</p>
+          </div>
+      
+        </div>
+      </div>
+      <div class="col">
+        <a href="#"><img src="https://picsum.photos/300/160/?random=1" class="top"></a>
+        <div class="bottom">
+          <div class="firstbar">
+            <div class="img">
+              <a href="#"><img src="https://picsum.photos/40/40/?random=12"></a>
+            </div>
+            <div class="text">
+              <h3 class="title"><a href=""> 居酒屋風雞翅&蒟蒻甜辛煮/Ama kara Chicken Wings |MASAの料理ABC</a></h3>
+            </div>
+          </div>
+          <div class="subtitle">
+            <p>MASAの料理ABC</p>
+            <p>觀看次數：442次・兩年前</p>
+          </div>
+      
+        </div>
+      </div>
+      <div class="col">
+        <a href="#"><img src="https://picsum.photos/300/160/?random=1" class="top"></a>
+        <div class="bottom">
+          <div class="firstbar">
+            <div class="img">
+              <a href="#"><img src="https://picsum.photos/40/40/?random=12"></a>
+            </div>
+            <div class="text">
+              <h3 class="title"><a href=""> 居酒屋風雞翅&蒟蒻甜辛煮/Ama kara Chicken Wings |MASAの料理ABC</a></h3>
+            </div>
+          </div>
+          <div class="subtitle">
+            <p>MASAの料理ABC</p>
+            <p>觀看次數：442次・兩年前</p>
+          </div>
+      
+        </div>
+      </div>
+      <div class="col">
+        <a href="#"><img src="https://picsum.photos/300/160/?random=1" class="top"></a>
+        <div class="bottom">
+          <div class="firstbar">
+            <div class="img">
+              <a href="#"><img src="https://picsum.photos/40/40/?random=12"></a>
+            </div>
+            <div class="text">
+              <h3 class="title"><a href=""> 居酒屋風雞翅&蒟蒻甜辛煮/Ama kara Chicken Wings |MASAの料理ABC</a></h3>
+            </div>
+          </div>
+          <div class="subtitle">
+            <p>MASAの料理ABC</p>
+            <p>觀看次數：442次・兩年前</p>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
